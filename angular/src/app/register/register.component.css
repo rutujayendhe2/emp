@@ -1,0 +1,19 @@
+input[type=text], input[type=password],input[type=email] ,input[type=tel]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(189, 222, 239);
+    box-sizing: border-box;
+    background-color: white;
+  }
+
+  .cart{
+    background-color:#E2D1F9;
+     width: 50%;
+      margin: auto;
+      font-weight: bolder;
+
+    }
+  
+  
