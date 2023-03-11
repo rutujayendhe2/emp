@@ -1,0 +1,45 @@
+<hr/>
+<h1 class="text-center"><strong>Employee List</strong></h1>
+<div class="row">
+  <div class="col-md-8">  </div>
+  <div class="col-md-4">
+    <button class="btn btn-success" style="margin-left: 160px;" routerLink="/create-employee">Add Employee</button>
+  </div>
+  
+</div>
+<hr/>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th> First Name</th>
+      <th> Last Name </th>
+      <th> Email</th>
+      <th> PhoneNo</th>
+      <th> Address</th>
+      <th> status</th>
+      <th> Actions </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees  | paginate: { itemsPerPage: 4, currentPage: p }" >
+      <td> {{ employee.firstName }} </td>
+      <td> {{ employee.lastName }} </td>
+      <td> {{ employee.emailAdd }} </td>
+      <td> {{ employee.phoneNo }} </td>
+      <td> {{employee.address}}</td>
+      <td> {{employee.status}}</td>
+      <td>
+        <button type="submit" (click)="updateEmployee(employee.empId)"  class="btn btn-primary" title="edit"> <i class="material-icons">edit</i>  </button> &nbsp;      
+        <button (click)="deleteEmployee(employee.empId)" class="btn btn-danger delete btn" title="delete"><i class="material-icons"> delete</i></button>  &nbsp; 
+        <button type="button" (click)="employeeDetails(employee.empId)" class="btn btn-info" title="view"> <i class="material-icons"> visibility</i></button>
+
+      </td>
+    </tr>
+  </tbody>
+ 
+
+</table>
+<div class="container d-flex align-items-center justify-content-center ">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls><!--pagination end -->
+</div>
+

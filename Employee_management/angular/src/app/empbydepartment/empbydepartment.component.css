@@ -1,0 +1,22 @@
+.dropdown-content a{
+    color:black;
+    display:inline-block;
+   }
+   .dropdown-content a:hover{
+   background-color:black;
+   color:white;
+   }
+   .dropdown-content {
+    display: none;
+    position: absolute;
+    color:black;
+    background-color:white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+    display:inline;
+    width:200px;
+    }

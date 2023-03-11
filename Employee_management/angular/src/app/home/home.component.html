@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lm navbar-dark" style="background-color: #317773; padding: 18px;">
+    <ul class = "navbar-nav"   >
+        <li class = "nav-item" >
+            <a routerLink="employees" routerLinkActive="active" class="nav-link" style="color: white;">Employee List</a>
+       </li>
+       <li class="nav-item dropdown">
+        <a class="nav-link mylink" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="alist">
+        <i class="fa-solid fa-building">
+        </i> Departments
+        </a>
+        <div class="dropdown-content">
+        <div class="d-flex">
+        <div class="top-wear">
+        <li *ngFor="let department of departments">
+        <a class="dropdown-item mylink" routerLink="/empbydepartment/{{department.depName}}">{{department.depName}}</a>
+        </li>
+        </div>
+        </div>
+        </div>
+        </li>
+       <!-- <li class = "nav-item">
+            <a routerLink="login" routerLinkActive="active" class="nav-link" >Login</a>
+        </li>
+
+        <li class = "nav-item">
+            <a routerLink="register" routerLinkActive="active" class="nav-link" >Register</a>
+        </li> -->
+    </ul>
+  </nav>

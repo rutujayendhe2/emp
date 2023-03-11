@@ -1,0 +1,38 @@
+<section class="vh-100" id="loginform" style="background-color: white">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+
+                <div class="cart" style="border-radius: 1rem; font-weight: bolder;">
+                    <div class="col-md-6 offset-md-3 mt-4 ">
+                            <h1><strong>Login</strong></h1>
+                            <form  #form="ngForm" (ngSubmit)="onSubmit(form)">
+                                <div class="mb-3">
+                                    <label for="loginUserhome" class="example-full-width" appearance="fill">
+                                        Email address</label>
+                                    <input type="email" name="emailAdd" ngModel required #emailAdd="ngModel"
+                                    class="form-control" id="emailAdd" placeholder="Enter username">
+                                    
+                                    
+                                </div>
+                    
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label" appearance="fill">Password</label>
+                                    <input type="password" name="password" ngModel required #password="ngModel"
+                                    class="form-control" 
+                                    id="password"  placeholder="Enter password">
+                                    
+                                </div>
+                                <a routerLink="/register" style=" color: rgb(27, 25, 25);">Don't have an account?Sign Up</a><br>
+                                <div class="pt-1 mb-4">
+                                    <button type="submit" 
+                                    class="btn btn-dark btn-lg btn-block">Login</button>
+                                    <span class="text-success"> {{login}}</span>
+                                </div>
+                                
+                            </form>
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>

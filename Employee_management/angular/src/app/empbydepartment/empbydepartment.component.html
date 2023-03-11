@@ -1,0 +1,32 @@
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <table class=" table table-striped">
+                <thead>
+                    <th>Department Name</th>
+                    <th> First Name</th>
+                    <th> Last Name </th>
+                    <th> Email</th>
+                    <th> PhoneNo</th>
+                    <th> Address</th>
+                    <th> status</th>
+                    
+
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of department.employee ">
+                        <td>{{department.depName}}</td>
+                        <td> {{ employee.firstName }} </td>
+                        <td> {{ employee.lastName }} </td>
+                        <td> {{ employee.emailAdd }} </td>
+                        <td>{{employee.phoneNo}}</td>
+                        <td> {{employee.address}}</td>
+                        <td> {{employee.status}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
